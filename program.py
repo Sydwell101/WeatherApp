@@ -1,13 +1,13 @@
 import requests
 import bs4
 import collections
-
+import header
 WeatherReport = collections.namedtuple('WeatherReport',
                                        'loc, cond, temp')
 
 
 def main():
-    print_header()
+    header.print_header()
     location = get_location()
     html = get_html_from_web(location)
     report = get_weather_from_html(html)
@@ -16,12 +16,6 @@ def main():
         report.temp,
         report.cond
     ))
-
-
-def print_header():
-    print('----------------------')
-    print('    Weather APP')
-    print('----------------------')
 
 
 def get_location():
