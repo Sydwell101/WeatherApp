@@ -1,0 +1,1 @@
+This is a weather app for getting the current weather updates on the location of your choice.
